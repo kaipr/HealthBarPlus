@@ -1,0 +1,31 @@
+bar:
+  # This is the main bar format, there are multiple placeholders:
+  #   {health_bar} = current health bar
+  #   {damage_bar} = current damage bar (max health - current health)
+  #   {health}     = current health as number
+  #   {max_health} = max health as number
+  # You can use the § color notation to colorize the string, \n for newline
+  format: "\n§8[§a{health_bar}§c{damage_bar}§7{health}§8]"
+
+  # Character used to display the bar
+  # Each one representing 100/character_count % hp
+  character: "|"
+
+  # Amount of "bar_character"s used to display the health+damage bar
+  character_count: 20
+
+system:
+  # If you set this to true, only players with the "healthbarplus.see" permission
+  # can see the health bars (this sets per-player titles and needs more resources)
+  use_see_permission: false
+
+  # Ticks between manual health bar updates (0 to disable)
+  update_ticks: 10
+  
+  # After how many updates it should force-update every bar (0 to disable)
+  # This ignores the health cache and may not be needed
+  force_update_every: 10
+
+  # This is used to separate the health bar from other titles
+  # don't change unless you are really sure what you do!
+  separator: "§e§c§e"

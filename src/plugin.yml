@@ -1,0 +1,23 @@
+name: HealthBarPlus
+main: net.blockheaven.kaipr.healthbarplus.HealthBarPlus
+version: 0.1-dev
+author: kaipr
+description: Adds a healthbar to players for SpoutCraft clients.
+commands:
+  healthbarplus:
+    description: Provides functions to reload the config.
+    usage: healthbarplus
+
+permissions:
+  healthbarplus:
+    description: HealthBar permissions
+    type: map
+    map:
+      see:
+        description: If a player can see the health bars
+        type: boolean
+        default: false
+      reload:
+        description: Whether or not they may reload the configuration
+        type: boolean
+        default: op
